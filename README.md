@@ -1,10 +1,8 @@
 Kuidas rakendus Dockeris tööle panna?
 1. Installin dockeri ja teen restardi
 2. Login Docker Desktop-pi sisse
-3. Installin "npm install -g create-react-app"
-et seadistada React-i põhirakendus. 
-4. cd react-docker-example/
-5. Teen kausta faili Dockerfile ja lisan sinna järgmised read:
+3. Teen Docker Fili "Dockerfile" põhi kataloogi
+4. Lisan sinna järgmised read:
 "FROM node:18-alpine
 WORKDIR /react-docker-example/
 
@@ -15,12 +13,14 @@ COPY package.json /react-docker-example/
 RUN npm install .
 CMD ["npm", "start"] ."
 
-6. docker image build -t react-example-image:latest .
+See teeb konteineri, kuhu sisse kopeeritakse sisu minu react projektist.
+
+5. docker image build -t lkticdocker:latest .
 Loon Docker image-i
 
-7. Jooksutan konteineri käsklusega: docker run -p 3000:3000 react-example-image:latest
+6. Jooksutan konteineri käsklusega: docker run -p 3000:3000 lkticdocker:latest
 
-8. Nüüd ma saan rakendusele ligipääsu minnes http://localhost:3000
+7. Nüüd ma saan rakendusele ligipääsu minnes http://localhost:3000
 
 
 Probleemid:
@@ -41,3 +41,4 @@ Ma ei saa Docker Desktopi sisse logida, annab sellise sõnumi ja midagi ei liigu
 6. "npm install -g create-react-app" ei töötanud, googeldasin
 ja kasutasin käsklust npx create-react-app react-docker-example.
 See tegi lõpuks kausta nimega react-docker-example
+7. 
