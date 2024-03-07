@@ -5,7 +5,7 @@ Kuidas rakendus Dockeris tööle panna?
 et seadistada React-i põhirakendus. 
 4. cd react-docker-example/
 5. Teen kausta faili Dockerfile ja lisan sinna järgmised read:
-FROM node:18-alpine
+"FROM node:18-alpine
 WORKDIR /react-docker-example/
 
 COPY public/ /react-docker-example/public
@@ -13,7 +13,7 @@ COPY src/ /react-docker-example/src
 COPY package.json /react-docker-example/
 
 RUN npm install .
-CMD ["npm", "start"] .
+CMD ["npm", "start"] ."
 6. docker image build -t react-example-image:latest .
 Loon Docker image-i
 7. Jooksutan konteineri käsklusega: docker run -p 3000:3000 react-example-image:latest
