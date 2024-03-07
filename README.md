@@ -26,3 +26,11 @@ $ npm start
 
 ## :mailbox: Contact
   - <a target="_blank" href="mailto:ucefhammadi@gmail.com">E-mail</a>
+
+Probleemid:
+1. npm run start tagastas errori. 
+sass-loader'is oli probleem. 
+Leidsin failide hulgast sass-loader'i ja lugesin README.md
+Selle järgi jooksutasin git bash-is käskluse
+" npm install sass-loader sass webpack --save-dev " 
+Peale mida läks npm run start läbi.
