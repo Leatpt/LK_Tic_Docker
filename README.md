@@ -3,7 +3,8 @@ Kuidas rakendus Dockeris tööle panna?
 2. Login Docker Desktop-pi sisse
 3. Installin "npm install -g create-react-app"
 et seadistada React-i põhirakendus. 
-
+4. cd react-docker-example/
+5. 
 
 
 Probleemid:
