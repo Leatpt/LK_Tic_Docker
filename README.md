@@ -14,9 +14,12 @@ COPY package.json /react-docker-example/
 
 RUN npm install .
 CMD ["npm", "start"] ."
+
 6. docker image build -t react-example-image:latest .
 Loon Docker image-i
+
 7. Jooksutan konteineri käsklusega: docker run -p 3000:3000 react-example-image:latest
+
 8. Nüüd ma saan rakendusele ligipääsu minnes http://localhost:3000
 
 
